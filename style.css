@@ -1,3 +1,14 @@
+:root {
+  --main-bg-color: #f4f4f4;
+  --main-text-color: #202122;
+  --footer-bg-color: #333333;
+  --footer-text-color: #ffffff;
+  --footer-shadow-color: #000000;
+  --menu-hover-color: #ffcc00;
+}
+
+
+
 body {
   align-items: center;
   justify-content: center;
@@ -6,18 +17,63 @@ body {
   background-color: #f4f4f4;
 }
 
-main,
-footer {
-  padding: 1em;
+main {
+  padding: 2em;
   color: #202122;
   background-color: #ffffff;
-  direction: ltr
+  direction: ltr;
 }
 
+header {
+  text-align: center;
+  background-image: url("../img/eifel_tour.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
 footer {
-  color: #ffffff;
-  background-color: #333333;
-  box-shadow: inset 10 0 0 0 #000000;
+  padding: 2em;
+  color: var(--footer-text-color);
+  text-align: center;
+  background-color: var(--footer-bg-color);
+  box-shadow: inset 10px 0 0 0 var(--footer-shadow-color);
+}
+
+footer p {
+  margin-bottom: 1em;
+}
+
+footer a {
+  margin: 0 10px;
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
+
+.footer-date a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--menu-hover-color);
+  transition: color .3s;
+}
+
+address {
+  margin-bottom: 1em;
+  font-style: normal;
+}
+
+.footer-date {
+  padding: 1em;
+  margin-top: 1em;
+  background-color: rgb(0 0 0 / 20%);
+}
+
+.footer-date a:hover {
+  color: var(--menu-hover-color);
 }
 
 #menu {
@@ -48,38 +104,28 @@ footer {
   color: #ffcc00;
 }
 
-.footer-date {
-  background-color: rgb(0 0 0 / 20%)
-}
-
-/* Style for the content wrapper */
 .content-wrapper {
   display: flex;
-
-  /* Use flexbox to arrange items horizontally */
-
-  /* Center items vertically */
+  align-items: center;
 }
 
-
-/* Style for the text content */
-.content-wrapper div {
+.content-wrapper > div {
   flex: 1;
-
-  /* Take remaining space in the container */
-  padding-left: 20px;
-
-  /* Add some space between image and text */
+  padding-right: 20px;
 }
 
-/* Style for the figure (image and caption) */
 figure {
-  margin: 0;
-  text-align: right;
-
-  /* Remove default margin */
+  float: right;
+  margin-left: 20px;
+  text-align: center;
 }
 
-image {
-  align-items: end;
+img {
+  max-width: 100%;
+  height: auto;
+
 }
+
+/* Додайте або оновіть цей код в ваш файл CSS */
+
+
